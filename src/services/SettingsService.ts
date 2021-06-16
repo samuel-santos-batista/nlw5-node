@@ -3,7 +3,7 @@ import { getCustomRepository } from 'typeorm';
 import { SettingsRepository } from '../repositories/SettingsRepository';
 
 type ISettingsCreate = {
-  chat: boolean,
+  chat: boolean;
   username: string;
 }
 
