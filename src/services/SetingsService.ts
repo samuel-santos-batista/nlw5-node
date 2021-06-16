@@ -15,6 +15,9 @@ class SettingsService {
       username
     });
 
+    if(userAlreadyExists){
+      throw new Error("User alredy exits")
+    }
 
     const settings = settingsRepository.create({
       chat,
