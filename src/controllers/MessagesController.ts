@@ -16,6 +16,17 @@ class MessagesController {
 
       return response.status(201).json(messages);
    }
+
+   public async shoowByUser(request: Request, response: Response): Promise<Response
+   > {
+     const { id: user_id } = request.params;
+     
+     const messagesService = new MessagesService();
+ 
+     const messages = await messagesService.listByUser(user_id)
+ 
+       return response.status(201).json(messages);
+    }
 }
 
 export { MessagesController }
