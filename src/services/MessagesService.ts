@@ -22,7 +22,7 @@ class MessagesService {
     const message = await this.messagesRepository.create({
       admin_id,
       text,
-      user_id
+      user_id,
     });
     
     await this.messagesRepository.save(message);

@@ -23,7 +23,7 @@ class ConnectionsService {
       socket_id, 
       user_id, 
       admin_id, 
-      id 
+      id,
     });
      
     await this.connectionsRepository.save(connection);
@@ -43,7 +43,6 @@ class ConnectionsService {
       where: { admin_id: null },
       relations: ["user"],
     });
-    console.log(connections)
 
     return connections;
   }

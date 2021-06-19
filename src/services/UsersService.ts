@@ -27,7 +27,7 @@ class UsersService {
      
     await this.usersRepository.save(user);
 
-    return user ;
+    return user;
   }
 
   public async findByEmail(email: string) {
