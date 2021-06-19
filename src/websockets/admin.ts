@@ -20,7 +20,7 @@ io.on("connect", async (socket)=>{
     const allMessages = await messagesService.listByUser(user_id);
 
     callback(allMessages); 
-  })
+  });
 
   socket.on("admin_send_message", async (params) =>{
     const { user_id, text } = params;
@@ -36,7 +36,7 @@ io.on("connect", async (socket)=>{
     io.to(socket_id).emit("admin_send_to_client", {
       text,
       socket_id
-    })
+    });
   })
 });
 
